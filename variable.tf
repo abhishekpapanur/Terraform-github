@@ -27,5 +27,5 @@ variable "dbpassword" {
 variable "key_name" {
   type      = string
   sensitive = "true"
-  default = "TF_key"
+  default   = "TF_key"
 }
