@@ -37,8 +37,8 @@ resource "aws_key_pair" "pc_auth" {
 # }
 
 resource "aws_instance" "abhi_node" {
-  count         = var.instance_count 
-  instance_type = var.instance_type  
+  count         = var.instance_count
+  instance_type = var.instance_type
   ami           = data.aws_ami.server_ami.id
 
   tags = {
