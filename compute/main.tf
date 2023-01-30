@@ -30,15 +30,15 @@ resource "aws_key_pair" "pc_auth" {
 
 }
 
-resource "local_file" "key" {
-  content  = tls_private_key.rsa.private_key_pem
-  filename = "tfkey"
+# resource "local_file" "key" {
+#   content  = tls_private_key.rsa.private_key_pem
+#   filename = "tfkey"
 
-}
+# }
 
 resource "aws_instance" "abhi_node" {
-  count         = var.instance_count #1
-  instance_type = var.instance_type  #t3.micro
+  count         = var.instance_count
+  instance_type = var.instance_type
   ami           = data.aws_ami.server_ami.id
 
   tags = {
