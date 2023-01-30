@@ -1,5 +1,5 @@
 
-name: 'Terraform'
+name: 'Terraform plan'
 
 on:
   pull_request:
