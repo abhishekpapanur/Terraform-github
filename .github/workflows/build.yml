@@ -1,6 +1,5 @@
 name: Build Terraform configuration 
 on:
-  workflow_call:
   push:
     branches:
       - main
